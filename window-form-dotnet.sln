@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "window-form-dotnet", "window-form-dotnet\window-form-dotnet.csproj", "{F87D8EE5-7074-4925-A963-436D4048E37E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCommands", "MyCommands\MyCommands.csproj", "{DD9A3C68-A329-4F0C-A9F9-2FFEB334DF44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F87D8EE5-7074-4925-A963-436D4048E37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F87D8EE5-7074-4925-A963-436D4048E37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F87D8EE5-7074-4925-A963-436D4048E37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD9A3C68-A329-4F0C-A9F9-2FFEB334DF44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD9A3C68-A329-4F0C-A9F9-2FFEB334DF44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD9A3C68-A329-4F0C-A9F9-2FFEB334DF44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD9A3C68-A329-4F0C-A9F9-2FFEB334DF44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
