@@ -12,7 +12,7 @@ namespace window_form_dotnet
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new NewCustomerForm());
+            Application.Run(new LoginForm());
 
         }
     }
