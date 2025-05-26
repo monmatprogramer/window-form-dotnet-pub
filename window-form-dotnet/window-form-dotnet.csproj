@@ -13,12 +13,4 @@
     <ProjectReference Include="..\MyCommands\MyCommands.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Model\dao\" />
-    <Folder Include="Model\data\" />
-    <Folder Include="Model\dto\" />
-    <Folder Include="Model\impl\" />
-  </ItemGroup>
-
 </Project>

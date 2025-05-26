@@ -1,19 +1,35 @@
+using System;
+using System.Windows.Forms;
+
 namespace window_form_dotnet
-{
-    internal static class Program
     {
+    internal static class Program
+        {
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
-        {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
+            {
+            // Enable application visual styles
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new LoginForm());
+            try
+                {
+                // Initialize database on startup
+                var dbConnection = window_form_dotnet.Model.data.DatabaseConnection.Instance;
 
+                // Start with login form
+                Application.Run(new LoginForm());
+                }
+            catch (Exception ex)
+                {
+                MessageBox.Show($"Application startup error: {ex.Message}",
+                              "Startup Error",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
+                }
+            }
         }
     }
-}
