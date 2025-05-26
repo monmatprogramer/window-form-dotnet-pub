@@ -158,7 +158,6 @@
                 NativeMethods.CreateRoundRectRgn(0, 0, btnSave.Width, btnSave.Height, 22, 22)
             );
 
-            // Add click event for Save button
             // Cancel Button
             var btnCancel = new Button
             {
