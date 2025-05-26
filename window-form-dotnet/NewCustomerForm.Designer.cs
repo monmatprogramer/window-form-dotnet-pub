@@ -102,9 +102,9 @@
             // txtPostal
             // 
             txtPostal.Font = new Font("Segoe UI", 10F);
-            txtPostal.Location = new Point(450, 87);
+            txtPostal.Location = new Point(466, 87);
             txtPostal.Name = "txtPostal";
-            txtPostal.Size = new Size(130, 30);
+            txtPostal.Size = new Size(160, 30);
             txtPostal.TabIndex = 7;
             // 
             // label10
@@ -389,7 +389,7 @@
             btnSave.TabIndex = 0;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
-            //btnSave.Click += btnSave_Click;
+            btnSave.Click += btnSave_Click;
             // 
             // NewCustomerForm
             // 
