@@ -1,12 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using window_form_dotnet.Model;
 
 namespace window_form_dotnet.Model.dao
     {
-    internal interface ISessionDao
+    public interface ISessionDao
         {
+        bool CreateSession(int userId, string sessionToken);
+        bool ValidateSession(string sessionToken);
+        bool ExtendSession(string sessionToken, TimeSpan extension);
+        bool EndSession(string sessionToken);
+        bool EndAllUserSessions(int userId);
+        Session GetSessionByToken(string sessionToken);
         }
     }

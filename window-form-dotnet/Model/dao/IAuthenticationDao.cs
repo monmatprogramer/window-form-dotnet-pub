@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using window_form_dotnet.Model;
 
 namespace window_form_dotnet.Model.dao
     {
-    internal interface IAuthenticationDao
+    public interface IAuthenticationDao
         {
+        AuthenticationResult ValidateCredentials(string username, string password);
+        bool ChangePassword(int userId, string oldPassword, string newPassword);
+        bool ResetPassword(string username, string newPassword);
+        bool LockUser(int userId);
+        bool UnlockUser(int userId);
+        bool IsUserLocked(int userId);
         }
     }

@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using window_form_dotnet.Model;
 
 namespace window_form_dotnet.Model.dao
     {
-    internal interface IUserDao
+    public interface IUserDao
         {
+        User GetUserById(int id);
+        User GetUserByUsername(string username);
+        User GetUserByEmail(string email);
+        List<User> GetAllUsers();
+        bool InsertUser(User user);
+        bool UpdateUser(User user);
+        bool DeleteUser(int id);
+        bool UpdateLastLoginDate(int userId, DateTime loginDate);
+        bool IsUsernameExists(string username);
+        bool IsEmailExists(string email);
         }
     }

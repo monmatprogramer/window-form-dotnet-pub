@@ -63,7 +63,7 @@
             pnlMainContainer.Margin = new Padding(3, 4, 3, 4);
             pnlMainContainer.Name = "pnlMainContainer";
             pnlMainContainer.Padding = new Padding(57, 67, 57, 67);
-            pnlMainContainer.Size = new Size(699, 867);
+            pnlMainContainer.Size = new Size(700, 867);
             pnlMainContainer.TabIndex = 0;
             // 
             // pnlLoginCard
@@ -80,16 +80,15 @@
             pnlLoginCard.Margin = new Padding(3, 4, 3, 4);
             pnlLoginCard.Name = "pnlLoginCard";
             pnlLoginCard.Padding = new Padding(46, 53, 46, 53);
-            pnlLoginCard.Size = new Size(585, 733);
+            pnlLoginCard.Size = new Size(586, 733);
             pnlLoginCard.TabIndex = 0;
-            pnlLoginCard.Paint += pnlLoginCard_Paint;
             // 
             // pnlLinksContainer
             // 
             pnlLinksContainer.Controls.Add(lnkForgotPassword);
             pnlLinksContainer.Controls.Add(lblRegisterPrompt);
             pnlLinksContainer.Controls.Add(lnkRegister);
-            pnlLinksContainer.Location = new Point(117, 513);
+            pnlLinksContainer.Location = new Point(99, 513);
             pnlLinksContainer.Margin = new Padding(3, 4, 3, 4);
             pnlLinksContainer.Name = "pnlLinksContainer";
             pnlLinksContainer.Size = new Size(366, 167);
@@ -138,7 +137,7 @@
             // 
             pnlButtonContainer.Controls.Add(btnLogin);
             pnlButtonContainer.Controls.Add(btnCancel);
-            pnlButtonContainer.Location = new Point(117, 380);
+            pnlButtonContainer.Location = new Point(99, 380);
             pnlButtonContainer.Margin = new Padding(3, 4, 3, 4);
             pnlButtonContainer.Name = "pnlButtonContainer";
             pnlButtonContainer.Size = new Size(366, 107);
@@ -184,7 +183,7 @@
             pnlPasswordContainer.Controls.Add(btnTogglePassword);
             pnlPasswordContainer.Controls.Add(txtPassword);
             pnlPasswordContainer.Controls.Add(lblPassword);
-            pnlPasswordContainer.Location = new Point(117, 260);
+            pnlPasswordContainer.Location = new Point(99, 260);
             pnlPasswordContainer.Margin = new Padding(3, 4, 3, 4);
             pnlPasswordContainer.Name = "pnlPasswordContainer";
             pnlPasswordContainer.Size = new Size(366, 93);
@@ -236,7 +235,7 @@
             // 
             pnlUsernameContainer.Controls.Add(txtUsername);
             pnlUsernameContainer.Controls.Add(lblUsername);
-            pnlUsernameContainer.Location = new Point(117, 153);
+            pnlUsernameContainer.Location = new Point(99, 153);
             pnlUsernameContainer.Margin = new Padding(3, 4, 3, 4);
             pnlUsernameContainer.Name = "pnlUsernameContainer";
             pnlUsernameContainer.Size = new Size(366, 93);
@@ -271,7 +270,7 @@
             // 
             lblSubtitle.Font = new Font("Segoe UI", 10F);
             lblSubtitle.ForeColor = Color.FromArgb(128, 128, 128);
-            lblSubtitle.Location = new Point(117, 125);
+            lblSubtitle.Location = new Point(99, 125);
             lblSubtitle.Name = "lblSubtitle";
             lblSubtitle.Size = new Size(366, 28);
             lblSubtitle.TabIndex = 1;
@@ -282,7 +281,7 @@
             // 
             lblWelcome.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
             lblWelcome.ForeColor = Color.FromArgb(51, 51, 51);
-            lblWelcome.Location = new Point(117, 65);
+            lblWelcome.Location = new Point(99, 65);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(366, 48);
             lblWelcome.TabIndex = 0;
@@ -294,7 +293,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 242, 247);
-            ClientSize = new Size(699, 867);
+            ClientSize = new Size(700, 867);
             Controls.Add(pnlMainContainer);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);

@@ -1,12 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace window_form_dotnet.Model.dto
+﻿namespace window_form_dotnet.Model.dto
     {
-    internal class LoginDto
+    public class LoginDto
         {
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public bool RememberMe { get; set; }
+
+        public LoginDto()
+            {
+            RememberMe = false;
+            }
+
+        public LoginDto(string username, string password, bool rememberMe = false)
+            {
+            Username = username?.Trim();
+            Password = password;
+            RememberMe = rememberMe;
+            }
+
+        public bool IsValid()
+            {
+            return !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password);
+            }
+
+        public LoginRequest ToLoginRequest()
+            {
+            return new LoginRequest(Username, Password, RememberMe);
+            }
         }
     }

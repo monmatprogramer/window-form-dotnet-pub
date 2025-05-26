@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using window_form_dotnet.Common;
+using window_form_dotnet.Model.dto;
+using window_form_dotnet.Model.impl;
 
 namespace window_form_dotnet
     {
     public partial class LoginForm : Form
         {
         private bool isPasswordVisible = false;
+        private readonly AuthenticationService _authService;
 
         public LoginForm()
             {
             InitializeComponent();
             InitializeFormStyle();
+            _authService = new AuthenticationService();
             }
 
         private void InitializeFormStyle()
@@ -67,6 +72,12 @@ namespace window_form_dotnet
 
             // Apply underline effect to text boxes
             ApplyTextBoxStyles();
+
+            // Check if user is already logged in
+            if (_authService.IsUserLoggedIn())
+                {
+                OpenDashboard();
+                }
             }
 
         private void ApplyTextBoxStyles()
@@ -136,72 +147,119 @@ namespace window_form_dotnet
             // Validate input fields
             if (ValidateLogin())
                 {
-                // Add your login logic here
-                MessageBox.Show($"Login attempt for user: {txtUsername.Text}",
-                              "Login",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Information);
+                PerformLogin();
+                }
+            }
 
-                // Example: Close form on successful login
-                // this.DialogResult = DialogResult.OK;
-                // this.Close();
+        private void PerformLogin()
+            {
+            try
+                {
+                // Set login in progress
+                SetLoginInProgress(true);
+
+                // Create login DTO
+                var loginDto = new LoginDto(txtUsername.Text, txtPassword.Text);
+
+                // Attempt login
+                var loginResponse = _authService.Login(loginDto);
+
+                if (loginResponse.IsSuccess)
+                    {
+                    // Login successful
+                    MessageBox.Show(loginResponse.Message,
+                                  "Login Successful",
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Information);
+
+                    // Open dashboard
+                    OpenDashboard();
+                    }
+                else
+                    {
+                    // Login failed
+                    MessageBox.Show(loginResponse.Message,
+                                  "Login Failed",
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Warning);
+
+                    // Clear password field
+                    txtPassword.Clear();
+                    txtPassword.Focus();
+                    }
+                }
+            catch (Exception ex)
+                {
+                MessageBox.Show($"An error occurred during login: {ex.Message}",
+                              "Error",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
+                }
+            finally
+                {
+                SetLoginInProgress(false);
+                }
+            }
+
+        private void OpenDashboard()
+            {
+            try
+                {
+                var dashboardForm = new DashboardForm();
+                dashboardForm.Show();
+                this.Hide();
+                }
+            catch (Exception ex)
+                {
+                MessageBox.Show($"Error opening dashboard: {ex.Message}",
+                              "Error",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
                 }
             }
 
         private void BtnCancel_Click(object sender, EventArgs e)
             {
-            // Close the form or clear fields
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
+            // Close the application
+            Application.Exit();
             }
 
         // Link click events
         private void LnkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             {
             // Handle forgot password functionality
-            MessageBox.Show("Forgot password functionality would open here.",
+            MessageBox.Show("Forgot password functionality would open here.\n\nFor demo purposes:\nUsername: monmat\nPassword: 12345678",
                           "Forgot Password",
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Information);
-
-            // Example: Open forgot password form
-            // ForgotPasswordForm forgotForm = new ForgotPasswordForm();
-            // forgotForm.ShowDialog();
             }
 
         private void LnkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             {
             // Handle registration functionality
-            MessageBox.Show("Registration form would open here.",
+            MessageBox.Show("Registration form would open here.\n\nFor demo purposes, use:\nUsername: monmat\nPassword: 12345678",
                           "Register",
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Information);
-
-            // Example: Open registration form
-            // RegisterForm registerForm = new RegisterForm();
-            // registerForm.ShowDialog();
             }
 
         // Input validation
         private bool ValidateLogin()
             {
-            if (string.IsNullOrWhiteSpace(txtUsername.Text))
-                {
-                MessageBox.Show("Please enter your username.",
-                              "Validation Error",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Warning);
-                txtUsername.Focus();
-                return false;
-                }
+            string validationError = ValidationHelper.ValidateCredentials(txtUsername.Text, txtPassword.Text);
 
-            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            if (!string.IsNullOrEmpty(validationError))
                 {
-                MessageBox.Show("Please enter your password.",
+                MessageBox.Show(validationError,
                               "Validation Error",
                               MessageBoxButtons.OK,
                               MessageBoxIcon.Warning);
-                txtPassword.Focus();
+
+                if (string.IsNullOrWhiteSpace(txtUsername.Text))
+                    txtUsername.Focus();
+                else
+                    txtPassword.Focus();
+
                 return false;
                 }
 
@@ -258,9 +316,14 @@ namespace window_form_dotnet
             return base.ProcessCmdKey(ref msg, keyData);
             }
 
-        private void pnlLoginCard_Paint(object sender, PaintEventArgs e)
+        // Override form closing to ensure proper cleanup
+        protected override void OnFormClosing(FormClosingEventArgs e)
             {
-
+            if (e.CloseReason == CloseReason.UserClosing)
+                {
+                Application.Exit();
+                }
+            base.OnFormClosing(e);
             }
         }
     }

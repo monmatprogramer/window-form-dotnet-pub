@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace window_form_dotnet.Model
+﻿namespace window_form_dotnet.Model
     {
-    internal class LoginRequest
+    public class LoginRequest
         {
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public bool RememberMe { get; set; }
+
+        public LoginRequest()
+            {
+            RememberMe = false;
+            }
+
+        public LoginRequest(string username, string password, bool rememberMe = false)
+            {
+            Username = username;
+            Password = password;
+            RememberMe = rememberMe;
+            }
         }
     }
