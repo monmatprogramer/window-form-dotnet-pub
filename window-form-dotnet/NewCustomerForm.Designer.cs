@@ -27,45 +27,28 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
+        {
+            this.SuspendLayout();
+
+            // Main Panel
+            var mainPanel = new Panel
             {
-            mainPanel = new Panel();
-            lblTitle = new Label();
-            groupPersonal = new GroupBox();
-            label1 = new Label();
-            txtCusID = new TextBox();
-            label2 = new Label();
-            txtFName = new TextBox();
-            label3 = new Label();
-            txtLName = new TextBox();
-            lblGender = new Label();
-            radioM = new RadioButton();
-            radioF = new RadioButton();
-            groupContact = new GroupBox();
-            label4 = new Label();
-            txtTel = new TextBox();
-            label5 = new Label();
-            txtEmail = new TextBox();
-            groupAddress = new GroupBox();
-            label7 = new Label();
-            txtStreet = new TextBox();
-            label8 = new Label();
-            txtCity = new TextBox();
-            label9 = new Label();
-            txtProvince = new TextBox();
-            label10 = new Label();
-            txtPostal = new TextBox();
-            buttonsPanel = new Panel();
-            btnSave = new Button();
-            btnCancel = new Button();
-            mainPanel.SuspendLayout();
-            groupPersonal.SuspendLayout();
-            groupContact.SuspendLayout();
-            groupAddress.SuspendLayout();
-            buttonsPanel.SuspendLayout();
-            SuspendLayout();
-            // 
-            // mainPanel
-            // 
+                Dock = DockStyle.Fill,
+                BackColor = Color.White,
+                Padding = new Padding(0)
+            };
+
+            // Title
+            var lblTitle = new Label
+            {
+                Text = "New Customer",
+                Font = new Font("Segoe UI", 22F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(52, 73, 94),
+                Dock = DockStyle.Top,
+                Height = 70,
+                TextAlign = ContentAlignment.MiddleCenter,
+                BackColor = Color.FromArgb(236, 240, 241)
+            };
             mainPanel.Controls.Add(lblTitle);
 
             // Personal Info Group
