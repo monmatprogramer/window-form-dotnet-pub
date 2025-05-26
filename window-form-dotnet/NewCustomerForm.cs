@@ -16,6 +16,7 @@ namespace window_form_dotnet
         {
             InitializeComponent();
         }
+        // This method is called when the form loads
 
         private void label1_Click(object sender, EventArgs e)
         {
