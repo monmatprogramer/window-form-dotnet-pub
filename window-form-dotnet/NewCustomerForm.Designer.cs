@@ -67,6 +67,33 @@
             // mainPanel
             // 
             mainPanel.Controls.Add(lblTitle);
+
+            // Personal Info Group
+            var groupPersonal = new GroupBox
+            {
+                Text = "Personal Information",
+                Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                Dock = DockStyle.Top,
+                Height = 120,
+                Padding = new Padding(20, 15, 20, 10),
+                BackColor = Color.White
+            };
+
+            label1 = new Label { Text = "Customer ID", Font = new Font("Segoe UI", 10F), Location = new Point(10, 30), Width = 100 };
+            txtCusID = new TextBox { Name = "txtCusID", Location = new Point(120, 27), Width = 150, Font = new Font("Segoe UI", 10F) };
+
+            label2 = new Label { Text = "First Name", Font = new Font("Segoe UI", 10F), Location = new Point(290, 30), Width = 80 };
+            txtFName = new TextBox { Name = "txtFName", Location = new Point(380, 27), Width = 130, Font = new Font("Segoe UI", 10F) };
+
+            label3 = new Label { Text = "Last Name", Font = new Font("Segoe UI", 10F), Location = new Point(530, 30), Width = 80 };
+            txtLName = new TextBox { Name = "txtLName", Location = new Point(620, 27), Width = 130, Font = new Font("Segoe UI", 10F) };
+
+            // Gender
+            var lblGender = new Label { Text = "Gender", Font = new Font("Segoe UI", 10F), Location = new Point(10, 70), Width = 100 };
+            radioM = new RadioButton { Text = "Male", Location = new Point(120, 68), Font = new Font("Segoe UI", 10F), FlatStyle = FlatStyle.Flat };
+            radioF = new RadioButton { Text = "Female", Location = new Point(200, 68), Font = new Font("Segoe UI", 10F), FlatStyle = FlatStyle.Flat };
+
+            groupPersonal.Controls.AddRange(new Control[] { label1, txtCusID, label2, txtFName, label3, txtLName, lblGender, radioM, radioF });
             mainPanel.Controls.Add(groupPersonal);
             mainPanel.Controls.Add(groupContact);
             mainPanel.Controls.Add(groupAddress);
