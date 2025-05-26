@@ -1,7 +1,7 @@
 ﻿namespace window_form_dotnet
-{
-    partial class NewCustomerForm
     {
+    partial class NewCustomerForm
+        {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -12,13 +12,13 @@
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
             {
+            if (disposing && (components != null))
+                {
                 components.Dispose();
-            }
+                }
             base.Dispose(disposing);
-        }
+            }
 
         #region Windows Form Designer generated code
 
@@ -27,20 +27,20 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
+            {
             this.SuspendLayout();
 
             // Main Panel
             var mainPanel = new Panel
-            {
+                {
                 Dock = DockStyle.Fill,
                 BackColor = Color.White,
                 Padding = new Padding(0)
-            };
+                };
 
             // Title
             var lblTitle = new Label
-            {
+                {
                 Text = "New Customer",
                 Font = new Font("Segoe UI", 22F, FontStyle.Bold),
                 ForeColor = Color.FromArgb(52, 73, 94),
@@ -48,20 +48,20 @@
                 Height = 70,
                 TextAlign = ContentAlignment.TopCenter, // Changed from MiddleCenter to TopCenter
                 BackColor = Color.FromArgb(236, 240, 241)
-            };
+                };
             mainPanel.Controls.Add(lblTitle);
 
             // Padding for mainPanel
             // Personal Info Group
             var groupPersonal = new GroupBox
-            {
+                {
                 Text = "Personal Information",
                 Font = new Font("Segoe UI", 11F, FontStyle.Bold),
                 Dock = DockStyle.Top,
                 Height = 120,
                 Padding = new Padding(20, 15, 20, 10),
                 BackColor = Color.White
-            };
+                };
 
             label1 = new Label { Text = "Customer ID", Font = new Font("Segoe UI", 10F), Location = new Point(10, 30), Width = 100 };
             txtCusID = new TextBox { Name = "txtCusID", Location = new Point(120, 27), Width = 150, Font = new Font("Segoe UI", 10F) };
@@ -82,14 +82,14 @@
 
             // Contact Info Group
             var groupContact = new GroupBox
-            {
+                {
                 Text = "Contact Information",
                 Font = new Font("Segoe UI", 11F, FontStyle.Bold),
                 Dock = DockStyle.Top,
                 Height = 90,
                 Padding = new Padding(20, 15, 20, 10),
                 BackColor = Color.White
-            };
+                };
 
             label4 = new Label { Text = "Mobile Phone", Font = new Font("Segoe UI", 10F), Location = new Point(10, 30), Width = 100 };
             txtTel = new TextBox { Name = "txtTel", Location = new Point(120, 27), Width = 180, Font = new Font("Segoe UI", 10F) };
@@ -102,14 +102,14 @@
 
             // Address Group
             var groupAddress = new GroupBox
-            {
+                {
                 Text = "Address Information",
                 Font = new Font("Segoe UI", 11F, FontStyle.Bold),
                 Dock = DockStyle.Top,
                 Height = 120,
                 Padding = new Padding(20, 15, 20, 10),
                 BackColor = Color.White
-            };
+                };
 
             // Street
             label7 = new Label { Text = "Street", Font = new Font("Segoe UI", 10F), Location = new Point(10, 30), Width = 100 };
@@ -132,15 +132,15 @@
 
             // Buttons Panel (for bottom right alignment)
             var buttonsPanel = new Panel
-            {
+                {
                 Dock = DockStyle.Bottom,
                 Height = 70,
                 BackColor = Color.FromArgb(236, 240, 241)
-            };
+                };
 
             // Save Button
             var btnSave = new Button
-            {
+                {
                 Name = "btnSave",
                 Text = "Save",
                 Font = new Font("Segoe UI", 11F, FontStyle.Bold),
@@ -152,16 +152,15 @@
                 Cursor = Cursors.Hand,
                 Location = new Point(520, 13),
                 TabIndex = 100
-            };
+                };
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.Region = System.Drawing.Region.FromHrgn(
                 NativeMethods.CreateRoundRectRgn(0, 0, btnSave.Width, btnSave.Height, 22, 22)
             );
 
-            // Add click event for Save button
             // Cancel Button
             var btnCancel = new Button
-            {
+                {
                 Name = "btnCancel",
                 Text = "Cancel",
                 Font = new Font("Segoe UI", 11F, FontStyle.Bold),
@@ -173,7 +172,7 @@
                 Cursor = Cursors.Hand,
                 Location = new Point(660, 13),
                 TabIndex = 101
-            };
+                };
             btnCancel.FlatAppearance.BorderSize = 0;
             btnCancel.Region = System.Drawing.Region.FromHrgn(
                 NativeMethods.CreateRoundRectRgn(0, 0, btnCancel.Width, btnCancel.Height, 22, 22)
@@ -193,7 +192,7 @@
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "New Customer";
             this.ResumeLayout(false);
-        }
+            }
 
         #endregion
 
@@ -218,13 +217,13 @@
         private TextBox txtCity;
         private TextBox txtProvince;
         private TextBox txtPostal;
-    }
+        }
 
     // Helper for rounded corners
     internal static class NativeMethods
-    {
+        {
         [System.Runtime.InteropServices.DllImport("gdi32.dll", SetLastError = true)]
         public static extern IntPtr CreateRoundRectRgn(
             int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
+        }
     }
-}
