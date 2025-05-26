@@ -11,30 +11,35 @@ using System.Windows.Forms;
 namespace window_form_dotnet
 {
     public partial class NewCustomerForm : Form
-    {
-        public NewCustomerForm()
         {
+        public NewCustomerForm()
+            {
             InitializeComponent();
-        }
+            }
 
         private void label1_Click(object sender, EventArgs e)
-        {
+            {
 
-        }
+            }
 
         private void label4_Click(object sender, EventArgs e)
-        {
+            {
 
-        }
+            }
 
         private void label6_Click(object sender, EventArgs e)
-        {
+            {
 
-        }
+            }
 
         private void label10_Click(object sender, EventArgs e)
-        {
+            {
 
+            }
+
+        private void groupPersonal_Enter(object sender, EventArgs e)
+            {
+
+            }
         }
     }
-}
