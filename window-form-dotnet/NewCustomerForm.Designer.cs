@@ -46,7 +46,7 @@
                 ForeColor = Color.FromArgb(52, 73, 94),
                 Dock = DockStyle.Top,
                 Height = 70,
-                TextAlign = ContentAlignment.MiddleCenter,
+                TextAlign = ContentAlignment.TopCenter, // Changed from MiddleCenter to TopCenter
                 BackColor = Color.FromArgb(236, 240, 241)
             };
             mainPanel.Controls.Add(lblTitle);
