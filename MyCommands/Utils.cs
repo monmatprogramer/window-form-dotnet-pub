@@ -1,6 +1,6 @@
 ﻿namespace MyCommands
     {
-    public class Class1
+    public class Utils
         {
 
         }
