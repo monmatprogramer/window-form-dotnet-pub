@@ -51,6 +51,7 @@
             };
             mainPanel.Controls.Add(lblTitle);
 
+            // Padding for mainPanel
             // Personal Info Group
             var groupPersonal = new GroupBox
             {
