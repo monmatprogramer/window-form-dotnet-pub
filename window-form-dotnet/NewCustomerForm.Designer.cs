@@ -28,238 +28,169 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            txtCusID = new TextBox();
-            txtFName = new TextBox();
-            label2 = new Label();
-            txtLName = new TextBox();
-            label3 = new Label();
-            radioM = new RadioButton();
-            radioF = new RadioButton();
-            label4 = new Label();
-            label5 = new Label();
-            txtTel = new TextBox();
-            label6 = new Label();
-            txtEmail = new TextBox();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            txtStreet = new TextBox();
-            txtCity = new TextBox();
-            txtProvince = new TextBox();
-            txtPostal = new TextBox();
-            SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(42, 27);
-            label1.Name = "label1";
-            label1.Size = new Size(94, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Customer ID:";
-            label1.Click += label1_Click;
-            // 
-            // txtCusID
-            // 
-            txtCusID.Location = new Point(162, 24);
-            txtCusID.Name = "txtCusID";
-            txtCusID.Size = new Size(156, 27);
-            txtCusID.TabIndex = 1;
-            // 
-            // txtFName
-            // 
-            txtFName.Location = new Point(162, 79);
-            txtFName.Name = "txtFName";
-            txtFName.Size = new Size(156, 27);
-            txtFName.TabIndex = 3;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(42, 86);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 20);
-            label2.TabIndex = 2;
-            label2.Text = "First Name:";
-            // 
-            // txtLName
-            // 
-            txtLName.Location = new Point(433, 79);
-            txtLName.Name = "txtLName";
-            txtLName.Size = new Size(111, 27);
-            txtLName.TabIndex = 5;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(333, 86);
-            label3.Name = "label3";
-            label3.Size = new Size(82, 20);
-            label3.TabIndex = 4;
-            label3.Text = "Last Name:";
-            // 
-            // radioM
-            // 
-            radioM.AutoSize = true;
-            radioM.Location = new Point(590, 84);
-            radioM.Name = "radioM";
-            radioM.Size = new Size(63, 24);
-            radioM.TabIndex = 8;
-            radioM.TabStop = true;
-            radioM.Text = "Male";
-            radioM.UseVisualStyleBackColor = true;
-            // 
-            // radioF
-            // 
-            radioF.AutoSize = true;
-            radioF.Location = new Point(672, 84);
-            radioF.Name = "radioF";
-            radioF.Size = new Size(78, 24);
-            radioF.TabIndex = 9;
-            radioF.TabStop = true;
-            radioF.Text = "Female";
-            radioF.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(43, 145);
-            label4.Name = "label4";
-            label4.Size = new Size(104, 20);
-            label4.TabIndex = 10;
-            label4.Text = "Mobile Phone:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(43, 202);
-            label5.Name = "label5";
-            label5.Size = new Size(106, 20);
-            label5.TabIndex = 11;
-            label5.Text = "Email Address:";
-            // 
-            // txtTel
-            // 
-            txtTel.Location = new Point(162, 138);
-            txtTel.Name = "txtTel";
-            txtTel.Size = new Size(156, 27);
-            txtTel.TabIndex = 12;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(43, 260);
-            label6.Name = "label6";
-            label6.Size = new Size(132, 20);
-            label6.TabIndex = 13;
-            label6.Text = "Customer Address:";
-            label6.Click += label6_Click;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(162, 195);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(267, 27);
-            txtEmail.TabIndex = 14;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(43, 311);
-            label7.Name = "label7";
-            label7.Size = new Size(51, 20);
-            label7.TabIndex = 15;
-            label7.Text = "Street:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(284, 311);
-            label8.Name = "label8";
-            label8.Size = new Size(37, 20);
-            label8.TabIndex = 16;
-            label8.Text = "City:";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(511, 311);
-            label9.Name = "label9";
-            label9.Size = new Size(108, 20);
-            label9.TabIndex = 17;
-            label9.Text = "Province/State:";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(43, 388);
-            label10.Name = "label10";
-            label10.Size = new Size(90, 20);
-            label10.TabIndex = 18;
-            label10.Text = "Postal Code:";
-            label10.Click += label10_Click;
-            // 
-            // txtStreet
-            // 
-            txtStreet.Location = new Point(109, 304);
-            txtStreet.Name = "txtStreet";
-            txtStreet.Size = new Size(148, 27);
-            txtStreet.TabIndex = 19;
-            // 
-            // txtCity
-            // 
-            txtCity.Location = new Point(333, 304);
-            txtCity.Name = "txtCity";
-            txtCity.Size = new Size(146, 27);
-            txtCity.TabIndex = 20;
-            // 
-            // txtProvince
-            // 
-            txtProvince.Location = new Point(635, 308);
-            txtProvince.Name = "txtProvince";
-            txtProvince.Size = new Size(144, 27);
-            txtProvince.TabIndex = 21;
-            // 
-            // txtPostal
-            // 
-            txtPostal.Location = new Point(162, 381);
-            txtPostal.Name = "txtPostal";
-            txtPostal.Size = new Size(148, 27);
-            txtPostal.TabIndex = 22;
-            // 
-            // NewCustomerForm
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(txtPostal);
-            Controls.Add(txtProvince);
-            Controls.Add(txtCity);
-            Controls.Add(txtStreet);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(txtEmail);
-            Controls.Add(label6);
-            Controls.Add(txtTel);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(radioF);
-            Controls.Add(radioM);
-            Controls.Add(txtLName);
-            Controls.Add(label3);
-            Controls.Add(txtFName);
-            Controls.Add(label2);
-            Controls.Add(txtCusID);
-            Controls.Add(label1);
-            Name = "NewCustomerForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "NewCustomerForm";
-            ResumeLayout(false);
-            PerformLayout();
+            this.SuspendLayout();
+
+            // Main Panel
+            var mainPanel = new Panel
+            {
+                Dock = DockStyle.Fill,
+                BackColor = Color.White,
+                Padding = new Padding(0)
+            };
+
+            // Title
+            var lblTitle = new Label
+            {
+                Text = "New Customer",
+                Font = new Font("Segoe UI", 22F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(52, 73, 94),
+                Dock = DockStyle.Top,
+                Height = 70,
+                TextAlign = ContentAlignment.MiddleCenter,
+                BackColor = Color.FromArgb(236, 240, 241)
+            };
+            mainPanel.Controls.Add(lblTitle);
+
+            // Personal Info Group
+            var groupPersonal = new GroupBox
+            {
+                Text = "Personal Information",
+                Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                Dock = DockStyle.Top,
+                Height = 120,
+                Padding = new Padding(20, 15, 20, 10),
+                BackColor = Color.White
+            };
+
+            label1 = new Label { Text = "Customer ID", Font = new Font("Segoe UI", 10F), Location = new Point(10, 30), Width = 100 };
+            txtCusID = new TextBox { Name = "txtCusID", Location = new Point(120, 27), Width = 150, Font = new Font("Segoe UI", 10F) };
+
+            label2 = new Label { Text = "First Name", Font = new Font("Segoe UI", 10F), Location = new Point(290, 30), Width = 80 };
+            txtFName = new TextBox { Name = "txtFName", Location = new Point(380, 27), Width = 130, Font = new Font("Segoe UI", 10F) };
+
+            label3 = new Label { Text = "Last Name", Font = new Font("Segoe UI", 10F), Location = new Point(530, 30), Width = 80 };
+            txtLName = new TextBox { Name = "txtLName", Location = new Point(620, 27), Width = 130, Font = new Font("Segoe UI", 10F) };
+
+            // Gender
+            var lblGender = new Label { Text = "Gender", Font = new Font("Segoe UI", 10F), Location = new Point(10, 70), Width = 100 };
+            radioM = new RadioButton { Text = "Male", Location = new Point(120, 68), Font = new Font("Segoe UI", 10F), FlatStyle = FlatStyle.Flat };
+            radioF = new RadioButton { Text = "Female", Location = new Point(200, 68), Font = new Font("Segoe UI", 10F), FlatStyle = FlatStyle.Flat };
+
+            groupPersonal.Controls.AddRange(new Control[] { label1, txtCusID, label2, txtFName, label3, txtLName, lblGender, radioM, radioF });
+            mainPanel.Controls.Add(groupPersonal);
+
+            // Contact Info Group
+            var groupContact = new GroupBox
+            {
+                Text = "Contact Information",
+                Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                Dock = DockStyle.Top,
+                Height = 90,
+                Padding = new Padding(20, 15, 20, 10),
+                BackColor = Color.White
+            };
+
+            label4 = new Label { Text = "Mobile Phone", Font = new Font("Segoe UI", 10F), Location = new Point(10, 30), Width = 100 };
+            txtTel = new TextBox { Name = "txtTel", Location = new Point(120, 27), Width = 180, Font = new Font("Segoe UI", 10F) };
+
+            label5 = new Label { Text = "Email Address", Font = new Font("Segoe UI", 10F), Location = new Point(320, 30), Width = 100 };
+            txtEmail = new TextBox { Name = "txtEmail", Location = new Point(430, 27), Width = 320, Font = new Font("Segoe UI", 10F) };
+
+            groupContact.Controls.AddRange(new Control[] { label4, txtTel, label5, txtEmail });
+            mainPanel.Controls.Add(groupContact);
+
+            // Address Group
+            var groupAddress = new GroupBox
+            {
+                Text = "Address Information",
+                Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                Dock = DockStyle.Top,
+                Height = 120,
+                Padding = new Padding(20, 15, 20, 10),
+                BackColor = Color.White
+            };
+
+            // Street
+            label7 = new Label { Text = "Street", Font = new Font("Segoe UI", 10F), Location = new Point(10, 30), Width = 100 };
+            txtStreet = new TextBox { Name = "txtStreet", Location = new Point(120, 27), Width = 200, Font = new Font("Segoe UI", 10F) };
+
+            // City
+            label8 = new Label { Text = "City", Font = new Font("Segoe UI", 10F), Location = new Point(340, 30), Width = 60 };
+            txtCity = new TextBox { Name = "txtCity", Location = new Point(410, 27), Width = 150, Font = new Font("Segoe UI", 10F) };
+
+            // Province/State
+            label9 = new Label { Text = "Province/State", Font = new Font("Segoe UI", 10F), Location = new Point(10, 70), Width = 100 };
+            txtProvince = new TextBox { Name = "txtProvince", Location = new Point(120, 67), Width = 200, Font = new Font("Segoe UI", 10F) };
+
+            // Postal Code
+            label10 = new Label { Text = "Postal Code", Font = new Font("Segoe UI", 10F), Location = new Point(340, 70), Width = 80 };
+            txtPostal = new TextBox { Name = "txtPostal", Location = new Point(430, 67), Width = 130, Font = new Font("Segoe UI", 10F) };
+
+            groupAddress.Controls.AddRange(new Control[] { label7, txtStreet, label8, txtCity, label9, txtProvince, label10, txtPostal });
+            mainPanel.Controls.Add(groupAddress);
+
+            // Buttons Panel (for bottom right alignment)
+            var buttonsPanel = new Panel
+            {
+                Dock = DockStyle.Bottom,
+                Height = 70,
+                BackColor = Color.FromArgb(236, 240, 241)
+            };
+
+            // Save Button
+            var btnSave = new Button
+            {
+                Name = "btnSave",
+                Text = "Save",
+                Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                BackColor = Color.FromArgb(52, 152, 219),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Width = 120,
+                Height = 44,
+                Cursor = Cursors.Hand,
+                Location = new Point(520, 13),
+                TabIndex = 100
+            };
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.Region = System.Drawing.Region.FromHrgn(
+                NativeMethods.CreateRoundRectRgn(0, 0, btnSave.Width, btnSave.Height, 22, 22)
+            );
+
+            // Cancel Button
+            var btnCancel = new Button
+            {
+                Name = "btnCancel",
+                Text = "Cancel",
+                Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                BackColor = Color.FromArgb(189, 195, 199),
+                ForeColor = Color.Black,
+                FlatStyle = FlatStyle.Flat,
+                Width = 120,
+                Height = 44,
+                Cursor = Cursors.Hand,
+                Location = new Point(660, 13),
+                TabIndex = 101
+            };
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.Region = System.Drawing.Region.FromHrgn(
+                NativeMethods.CreateRoundRectRgn(0, 0, btnCancel.Width, btnCancel.Height, 22, 22)
+            );
+
+            buttonsPanel.Controls.Add(btnSave);
+            buttonsPanel.Controls.Add(btnCancel);
+            mainPanel.Controls.Add(buttonsPanel);
+
+            // Add mainPanel to Form
+            this.Controls.Add(mainPanel);
+
+            // Form properties
+            this.BackColor = Color.White;
+            this.ClientSize = new Size(820, 520);
+            this.Font = new Font("Segoe UI", 10F);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "New Customer";
+            this.ResumeLayout(false);
         }
 
         #endregion
@@ -285,5 +216,13 @@
         private TextBox txtCity;
         private TextBox txtProvince;
         private TextBox txtPostal;
+    }
+
+    // Helper for rounded corners
+    internal static class NativeMethods
+    {
+        [System.Runtime.InteropServices.DllImport("gdi32.dll", SetLastError = true)]
+        public static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
     }
 }
