@@ -24,6 +24,8 @@ namespace window_form_dotnet
             {
             currentUsername = username;
             currentUserRole = userRole;
+            // Immediately update the profile display
+            UpdateUserProfile(username, userRole);
             }
 
         private void InitializeFormStyle()
@@ -120,9 +122,15 @@ namespace window_form_dotnet
             {
             LoadSampleData();
             LoadRecentActivity();
-
-            // Set initial focus
-            this.Focus();
+            if (!string.IsNullOrEmpty(currentUsername))
+                {
+                lblProfileName.Text = currentUsername;
+                lblProfileRole.Text = currentUserRole ?? "User";
+                // Update the welcome message or any other UI elements
+                lblAppTitle.Text = $"MyApp - Welcome {currentUsername}!";
+                }
+                // Set initial focus
+                this.Focus();
             }
 
         private void LoadSampleData()

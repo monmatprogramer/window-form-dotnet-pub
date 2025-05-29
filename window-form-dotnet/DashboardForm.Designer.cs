@@ -240,10 +240,10 @@
             pnlContentArea.Controls.Add(pnlSidebar);
             pnlContentArea.Controls.Add(pnlMainContent);
             pnlContentArea.Dock = DockStyle.Fill;
-            pnlContentArea.Location = new Point(0, 70);
+            pnlContentArea.Location = new Point(0, 0);
             pnlContentArea.Name = "pnlContentArea";
             pnlContentArea.Padding = new Padding(20);
-            pnlContentArea.Size = new Size(1400, 730);
+            pnlContentArea.Size = new Size(1400, 800);
             pnlContentArea.TabIndex = 1;
             // 
             // pnlSidebar
@@ -254,7 +254,7 @@
             pnlSidebar.Location = new Point(1080, 20);
             pnlSidebar.Name = "pnlSidebar";
             pnlSidebar.Padding = new Padding(10, 0, 0, 0);
-            pnlSidebar.Size = new Size(300, 690);
+            pnlSidebar.Size = new Size(300, 760);
             pnlSidebar.TabIndex = 1;
             // 
             // pnlProfileCard
@@ -264,10 +264,10 @@
             pnlProfileCard.Controls.Add(lblProfileName);
             pnlProfileCard.Controls.Add(lblProfileTitle);
             pnlProfileCard.Dock = DockStyle.Top;
-            pnlProfileCard.Location = new Point(10, 180);
+            pnlProfileCard.Location = new Point(10, 255);
             pnlProfileCard.Name = "pnlProfileCard";
             pnlProfileCard.Padding = new Padding(20);
-            pnlProfileCard.Size = new Size(290, 150);
+            pnlProfileCard.Size = new Size(290, 137);
             pnlProfileCard.TabIndex = 1;
             // 
             // lblProfileRole
@@ -311,7 +311,7 @@
             pnlQuickActions.Location = new Point(10, 0);
             pnlQuickActions.Name = "pnlQuickActions";
             pnlQuickActions.Padding = new Padding(20);
-            pnlQuickActions.Size = new Size(290, 180);
+            pnlQuickActions.Size = new Size(290, 255);
             pnlQuickActions.TabIndex = 0;
             // 
             // btnQuickAction3
@@ -321,7 +321,7 @@
             btnQuickAction3.FlatStyle = FlatStyle.Flat;
             btnQuickAction3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnQuickAction3.ForeColor = Color.White;
-            btnQuickAction3.Location = new Point(20, 130);
+            btnQuickAction3.Location = new Point(20, 173);
             btnQuickAction3.Name = "btnQuickAction3";
             btnQuickAction3.Size = new Size(250, 35);
             btnQuickAction3.TabIndex = 3;
@@ -336,7 +336,7 @@
             btnQuickAction2.FlatStyle = FlatStyle.Flat;
             btnQuickAction2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnQuickAction2.ForeColor = Color.White;
-            btnQuickAction2.Location = new Point(20, 85);
+            btnQuickAction2.Location = new Point(20, 128);
             btnQuickAction2.Name = "btnQuickAction2";
             btnQuickAction2.Size = new Size(250, 35);
             btnQuickAction2.TabIndex = 2;
@@ -351,7 +351,7 @@
             btnQuickAction1.FlatStyle = FlatStyle.Flat;
             btnQuickAction1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnQuickAction1.ForeColor = Color.White;
-            btnQuickAction1.Location = new Point(20, 40);
+            btnQuickAction1.Location = new Point(20, 83);
             btnQuickAction1.Name = "btnQuickAction1";
             btnQuickAction1.Size = new Size(250, 35);
             btnQuickAction1.TabIndex = 1;
@@ -377,7 +377,7 @@
             pnlMainContent.Dock = DockStyle.Fill;
             pnlMainContent.Location = new Point(20, 20);
             pnlMainContent.Name = "pnlMainContent";
-            pnlMainContent.Size = new Size(1360, 690);
+            pnlMainContent.Size = new Size(1360, 760);
             pnlMainContent.TabIndex = 0;
             // 
             // pnlStatsContainer
@@ -390,7 +390,7 @@
             pnlStatsContainer.Location = new Point(0, 0);
             pnlStatsContainer.Name = "pnlStatsContainer";
             pnlStatsContainer.Padding = new Padding(0, 0, 10, 20);
-            pnlStatsContainer.Size = new Size(1060, 120);
+            pnlStatsContainer.Size = new Size(1360, 120);
             pnlStatsContainer.TabIndex = 0;
             // 
             // pnlStat4
@@ -526,10 +526,10 @@
             pnlChartsContainer.Controls.Add(pnlChart2);
             pnlChartsContainer.Controls.Add(pnlChart1);
             pnlChartsContainer.Dock = DockStyle.Fill;
-            pnlChartsContainer.Location = new Point(0, 120);
+            pnlChartsContainer.Location = new Point(0, 0);
             pnlChartsContainer.Name = "pnlChartsContainer";
             pnlChartsContainer.Padding = new Padding(0, 0, 10, 20);
-            pnlChartsContainer.Size = new Size(1060, 370);
+            pnlChartsContainer.Size = new Size(1360, 560);
             pnlChartsContainer.TabIndex = 1;
             // 
             // pnlChart2
@@ -540,7 +540,7 @@
             pnlChart2.Location = new Point(530, 0);
             pnlChart2.Name = "pnlChart2";
             pnlChart2.Padding = new Padding(20);
-            pnlChart2.Size = new Size(530, 350);
+            pnlChart2.Size = new Size(820, 540);
             pnlChart2.TabIndex = 1;
             // 
             // lblChart2Title
@@ -561,7 +561,7 @@
             pnlChart1.Location = new Point(0, 0);
             pnlChart1.Name = "pnlChart1";
             pnlChart1.Padding = new Padding(20);
-            pnlChart1.Size = new Size(530, 350);
+            pnlChart1.Size = new Size(530, 540);
             pnlChart1.TabIndex = 0;
             // 
             // lblChart1Title
@@ -580,10 +580,10 @@
             pnlRecentActivity.Controls.Add(lstRecentActivity);
             pnlRecentActivity.Controls.Add(lblRecentActivityTitle);
             pnlRecentActivity.Dock = DockStyle.Bottom;
-            pnlRecentActivity.Location = new Point(0, 490);
+            pnlRecentActivity.Location = new Point(0, 560);
             pnlRecentActivity.Name = "pnlRecentActivity";
             pnlRecentActivity.Padding = new Padding(20);
-            pnlRecentActivity.Size = new Size(1060, 200);
+            pnlRecentActivity.Size = new Size(1360, 200);
             pnlRecentActivity.TabIndex = 2;
             // 
             // lstRecentActivity
@@ -592,10 +592,9 @@
             lstRecentActivity.Dock = DockStyle.Fill;
             lstRecentActivity.Font = new Font("Segoe UI", 9F);
             lstRecentActivity.FormattingEnabled = true;
-            lstRecentActivity.ItemHeight = 20;
             lstRecentActivity.Location = new Point(20, 50);
             lstRecentActivity.Name = "lstRecentActivity";
-            lstRecentActivity.Size = new Size(1020, 130);
+            lstRecentActivity.Size = new Size(1320, 130);
             lstRecentActivity.TabIndex = 1;
             // 
             // lblRecentActivityTitle
@@ -605,7 +604,7 @@
             lblRecentActivityTitle.ForeColor = Color.FromArgb(51, 51, 51);
             lblRecentActivityTitle.Location = new Point(20, 20);
             lblRecentActivityTitle.Name = "lblRecentActivityTitle";
-            lblRecentActivityTitle.Size = new Size(1020, 30);
+            lblRecentActivityTitle.Size = new Size(1320, 30);
             lblRecentActivityTitle.TabIndex = 0;
             lblRecentActivityTitle.Text = "Recent Activity";
             // 
@@ -617,7 +616,6 @@
             ClientSize = new Size(1400, 800);
             Controls.Add(pnlMainContainer);
             Font = new Font("Segoe UI", 9F);
-            FormBorderStyle = FormBorderStyle.Sizable;
             MinimumSize = new Size(1200, 600);
             Name = "DashboardForm";
             StartPosition = FormStartPosition.CenterScreen;
