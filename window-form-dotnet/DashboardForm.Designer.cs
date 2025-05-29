@@ -45,6 +45,7 @@
             lblProfileName = new Label();
             lblProfileTitle = new Label();
             pnlQuickActions = new Panel();
+            btnQuickAction4 = new Button();
             btnQuickAction3 = new Button();
             btnQuickAction2 = new Button();
             btnQuickAction1 = new Button();
@@ -71,6 +72,7 @@
             pnlRecentActivity = new Panel();
             lstRecentActivity = new ListBox();
             lblRecentActivityTitle = new Label();
+            btnQuickAction5 = new Button();
             pnlMainContainer.SuspendLayout();
             pnlTopNavigation.SuspendLayout();
             pnlContentArea.SuspendLayout();
@@ -264,10 +266,10 @@
             pnlProfileCard.Controls.Add(lblProfileName);
             pnlProfileCard.Controls.Add(lblProfileTitle);
             pnlProfileCard.Dock = DockStyle.Top;
-            pnlProfileCard.Location = new Point(10, 255);
+            pnlProfileCard.Location = new Point(10, 386);
             pnlProfileCard.Name = "pnlProfileCard";
             pnlProfileCard.Padding = new Padding(20);
-            pnlProfileCard.Size = new Size(290, 137);
+            pnlProfileCard.Size = new Size(290, 322);
             pnlProfileCard.TabIndex = 1;
             // 
             // lblProfileRole
@@ -303,6 +305,8 @@
             // pnlQuickActions
             // 
             pnlQuickActions.BackColor = Color.White;
+            pnlQuickActions.Controls.Add(btnQuickAction5);
+            pnlQuickActions.Controls.Add(btnQuickAction4);
             pnlQuickActions.Controls.Add(btnQuickAction3);
             pnlQuickActions.Controls.Add(btnQuickAction2);
             pnlQuickActions.Controls.Add(btnQuickAction1);
@@ -311,8 +315,23 @@
             pnlQuickActions.Location = new Point(10, 0);
             pnlQuickActions.Name = "pnlQuickActions";
             pnlQuickActions.Padding = new Padding(20);
-            pnlQuickActions.Size = new Size(290, 255);
+            pnlQuickActions.Size = new Size(290, 386);
             pnlQuickActions.TabIndex = 0;
+            // 
+            // btnQuickAction4
+            // 
+            btnQuickAction4.BackColor = Color.FromArgb(255, 128, 255);
+            btnQuickAction4.FlatAppearance.BorderSize = 0;
+            btnQuickAction4.FlatStyle = FlatStyle.Flat;
+            btnQuickAction4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnQuickAction4.ForeColor = Color.White;
+            btnQuickAction4.Location = new Point(17, 181);
+            btnQuickAction4.Name = "btnQuickAction4";
+            btnQuickAction4.Size = new Size(250, 35);
+            btnQuickAction4.TabIndex = 4;
+            btnQuickAction4.Text = "Add New Product";
+            btnQuickAction4.UseVisualStyleBackColor = false;
+            btnQuickAction4.Click += QuickAction_Click;
             // 
             // btnQuickAction3
             // 
@@ -321,7 +340,7 @@
             btnQuickAction3.FlatStyle = FlatStyle.Flat;
             btnQuickAction3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnQuickAction3.ForeColor = Color.White;
-            btnQuickAction3.Location = new Point(20, 173);
+            btnQuickAction3.Location = new Point(17, 295);
             btnQuickAction3.Name = "btnQuickAction3";
             btnQuickAction3.Size = new Size(250, 35);
             btnQuickAction3.TabIndex = 3;
@@ -608,6 +627,21 @@
             lblRecentActivityTitle.TabIndex = 0;
             lblRecentActivityTitle.Text = "Recent Activity";
             // 
+            // btnQuickAction5
+            // 
+            btnQuickAction5.BackColor = Color.FromArgb(255, 192, 128);
+            btnQuickAction5.FlatAppearance.BorderSize = 0;
+            btnQuickAction5.FlatStyle = FlatStyle.Flat;
+            btnQuickAction5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnQuickAction5.ForeColor = Color.White;
+            btnQuickAction5.Location = new Point(17, 237);
+            btnQuickAction5.Name = "btnQuickAction5";
+            btnQuickAction5.Size = new Size(250, 35);
+            btnQuickAction5.TabIndex = 5;
+            btnQuickAction5.Text = "Add New Supplier";
+            btnQuickAction5.UseVisualStyleBackColor = false;
+            btnQuickAction5.Click += QuickAction_Click;
+            // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -686,5 +720,7 @@
         private Label lblProfileTitle;
         private Label lblProfileName;
         private Label lblProfileRole;
+        private Button btnQuickAction4;
+        private Button btnQuickAction5;
         }
     }

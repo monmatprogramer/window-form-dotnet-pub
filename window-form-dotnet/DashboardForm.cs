@@ -129,8 +129,8 @@ namespace window_form_dotnet
                 // Update the welcome message or any other UI elements
                 lblAppTitle.Text = $"MyApp - Welcome {currentUsername}!";
                 }
-                // Set initial focus
-                this.Focus();
+            // Set initial focus
+            this.Focus();
             }
 
         private void LoadSampleData()
@@ -304,7 +304,7 @@ namespace window_form_dotnet
                 switch (button.Text)
                     {
                     case "Add New Customer":
-                        
+
                         var addCustomerForm = new NewCustomerForm();
                         addCustomerForm.Show();
                         this.Hide();
@@ -316,6 +316,16 @@ namespace window_form_dotnet
                     case "Generate Report":
                         MessageBox.Show("Report Generator would open here.\n\nThis would allow you to:\n- Select report type\n- Choose date range\n- Generate PDF/Excel reports",
                                       "Generate Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    case "Add New Product":
+                        var addProductForm = new NewProductForm();
+                        addProductForm.Show();
+                        this.Hide();
+                        break;
+                    case "Add New Supplier":
+                        var addNewSupplier = new NewSupplierForm();
+                        addNewSupplier.Show();
+                        this.Hide();
                         break;
                     }
                 }
@@ -472,5 +482,7 @@ namespace window_form_dotnet
             pnlChart1.Invalidate();
             pnlChart2.Invalidate();
             }
+
+
         }
     }
