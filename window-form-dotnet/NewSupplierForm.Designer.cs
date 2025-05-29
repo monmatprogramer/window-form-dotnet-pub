@@ -27,7 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
+            {
             btnSave = new Button();
             btnClose = new Button();
             label1 = new Label();
@@ -61,6 +61,7 @@
             btnClose.TabIndex = 1;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
             // label1
             // 
@@ -185,7 +186,7 @@
             Text = "NewSupplierForm";
             ResumeLayout(false);
             PerformLayout();
-        }
+            }
 
         #endregion
 

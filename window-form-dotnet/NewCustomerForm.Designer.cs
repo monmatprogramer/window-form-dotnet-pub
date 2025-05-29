@@ -27,7 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
+            {
             label1 = new Label();
             txtCusID = new TextBox();
             txtFName = new TextBox();
@@ -248,6 +248,7 @@
             bntClose.TabIndex = 24;
             bntClose.Text = "Close";
             bntClose.UseVisualStyleBackColor = true;
+            bntClose.Click += bntClose_Click;
             // 
             // NewCustomerForm
             // 
@@ -283,7 +284,7 @@
             Text = "NewCustomerForm";
             ResumeLayout(false);
             PerformLayout();
-        }
+            }
 
         #endregion
 

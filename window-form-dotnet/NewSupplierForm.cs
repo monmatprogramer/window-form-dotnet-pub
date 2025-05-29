@@ -11,15 +11,24 @@ using System.Windows.Forms;
 namespace window_form_dotnet
 {
     public partial class NewSupplierForm : Form
-    {
-        public NewSupplierForm()
         {
+        public NewSupplierForm()
+            {
             InitializeComponent();
-        }
+            }
 
         private void label3_Click(object sender, EventArgs e)
-        {
+            {
 
+            }
+
+        private void btnClose_Click(object sender, EventArgs e)
+            {
+            //open dashboard form
+            DashboardForm dashboardForm = new DashboardForm();
+            dashboardForm.Show();
+            //close this form
+            this.Close();
+            }
         }
     }
-}

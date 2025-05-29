@@ -11,20 +11,29 @@ using System.Windows.Forms;
 namespace window_form_dotnet
 {
     public partial class NewProductForm : Form
-    {
-        public NewProductForm()
         {
+        public NewProductForm()
+            {
             InitializeComponent();
-        }
+            }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
+            {
 
-        }
+            }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            {
 
+            }
+
+        private void button2_Click(object sender, EventArgs e)
+            {
+            // Open dashboard form
+            DashboardForm dashboardForm = new DashboardForm();
+            dashboardForm.Show();
+            // Close this form
+            this.Close();
+            }
         }
     }
-}

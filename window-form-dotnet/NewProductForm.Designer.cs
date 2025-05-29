@@ -27,7 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
+            {
             label1 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -249,6 +249,7 @@
             button2.TabIndex = 24;
             button2.Text = "Close";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // NewProductForm
             // 
@@ -284,7 +285,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
-        }
+            }
 
         #endregion
 
