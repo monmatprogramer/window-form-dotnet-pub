@@ -304,8 +304,10 @@ namespace window_form_dotnet
                 switch (button.Text)
                     {
                     case "Add New Customer":
-                        MessageBox.Show("Add New Customer form would open here.\n\nThis would allow you to:\n- Enter customer details\n- Set customer preferences\n- Save to database",
-                                      "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        var addCustomerForm = new NewCustomerForm();
+                        addCustomerForm.Show();
+                        this.Hide();
                         break;
                     case "Manage Orders":
                         MessageBox.Show("Order Management interface would open here.\n\nThis would allow you to:\n- View pending orders\n- Update order status\n- Process payments",
