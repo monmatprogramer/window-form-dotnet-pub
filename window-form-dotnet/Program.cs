@@ -35,6 +35,7 @@ namespace window_form_dotnet
 
                 // Start application
                 Application.Run(new LoginForm());
+                //Application.Run(new DashboardForm());
                 }
             catch (Exception ex)
                 {

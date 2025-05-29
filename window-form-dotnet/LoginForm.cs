@@ -205,7 +205,15 @@ namespace window_form_dotnet
             {
             try
                 {
-                var dashboardForm = new DashboardForm();
+                // Get the username from the login form
+                string username = txtUsername.Text.Trim();
+
+                // Determine user role/privilege (you can get this from your AuthenticationService)
+                string userRole = DetermineUserRole(username);
+
+                //Change dashboard form here
+                //var dashboardForm = new DashboardForm();
+                var dashboardForm = new DashboardForm(username, userRole);
                 dashboardForm.Show();
                 this.Hide();
                 }
@@ -324,6 +332,19 @@ namespace window_form_dotnet
                 Application.Exit();
                 }
             base.OnFormClosing(e);
+            }
+        private string DetermineUserRole(string username)
+            {
+            // Placeholder implementation for determining user role
+            // Replace this with actual logic to fetch user role based on the username
+            if (username.ToLower() == "admin" || username.ToLower() == "monmat")
+                {
+                return "Administrator";
+                }
+            else
+                {
+                return "User";
+                }
             }
         }
     }
