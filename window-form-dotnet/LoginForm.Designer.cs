@@ -32,10 +32,10 @@
             pnlLoginCard = new Panel();
             pnlLinksContainer = new Panel();
             lnkForgotPassword = new LinkLabel();
-            btnCancel = new Button();
             lblRegisterPrompt = new Label();
             lnkRegister = new LinkLabel();
             pnlButtonContainer = new Panel();
+            btnCancel = new Button();
             btnLogin = new Button();
             pnlPasswordContainer = new Panel();
             btnTogglePassword = new Button();
@@ -108,23 +108,6 @@
             lnkForgotPassword.TextAlign = ContentAlignment.MiddleCenter;
             lnkForgotPassword.LinkClicked += LnkForgotPassword_LinkClicked;
             // 
-            // btnCancel
-            // 
-            btnCancel.BackColor = Color.Gray;
-            btnCancel.FlatAppearance.BorderSize = 0;
-            btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Segoe UI", 10F);
-            btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(143, 107);
-            btnCancel.Margin = new Padding(3, 4, 3, 4);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(80, 40);
-            btnCancel.TabIndex = 5;
-            btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = false;
-            btnCancel.Visible = false;
-            btnCancel.Click += BtnCancel_Click;
-            // 
             // lblRegisterPrompt
             // 
             lblRegisterPrompt.Font = new Font("Segoe UI", 9F);
@@ -159,6 +142,22 @@
             pnlButtonContainer.Name = "pnlButtonContainer";
             pnlButtonContainer.Size = new Size(366, 151);
             pnlButtonContainer.TabIndex = 4;
+            // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = Color.Gray;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Segoe UI", 10F);
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Location = new Point(143, 107);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(80, 40);
+            btnCancel.TabIndex = 5;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += BtnCancel_Click;
             // 
             // btnLogin
             // 
@@ -281,7 +280,7 @@
             // 
             lblWelcome.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
             lblWelcome.ForeColor = Color.FromArgb(51, 51, 51);
-            lblWelcome.Location = new Point(101, 53);
+            lblWelcome.Location = new Point(101, 67);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(366, 48);
             lblWelcome.TabIndex = 0;
