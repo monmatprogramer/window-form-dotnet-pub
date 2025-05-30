@@ -73,6 +73,7 @@
             pnlRecentActivity = new Panel();
             lstRecentActivity = new ListBox();
             lblRecentActivityTitle = new Label();
+            btnAboutMe = new Button();
             pnlMainContainer.SuspendLayout();
             pnlTopNavigation.SuspendLayout();
             pnlContentArea.SuspendLayout();
@@ -105,6 +106,7 @@
             // pnlTopNavigation
             // 
             pnlTopNavigation.BackColor = Color.White;
+            pnlTopNavigation.Controls.Add(btnAboutMe);
             pnlTopNavigation.Controls.Add(btnLogout);
             pnlTopNavigation.Controls.Add(btnProfile);
             pnlTopNavigation.Controls.Add(btnSettings);
@@ -269,7 +271,7 @@
             pnlProfileCard.Location = new Point(10, 386);
             pnlProfileCard.Name = "pnlProfileCard";
             pnlProfileCard.Padding = new Padding(20);
-            pnlProfileCard.Size = new Size(290, 322);
+            pnlProfileCard.Size = new Size(290, 136);
             pnlProfileCard.TabIndex = 1;
             // 
             // lblProfileRole
@@ -642,6 +644,20 @@
             lblRecentActivityTitle.TabIndex = 0;
             lblRecentActivityTitle.Text = "Recent Activity";
             // 
+            // btnAboutMe
+            // 
+            btnAboutMe.BackColor = Color.Transparent;
+            btnAboutMe.FlatAppearance.BorderSize = 0;
+            btnAboutMe.FlatStyle = FlatStyle.Flat;
+            btnAboutMe.Font = new Font("Segoe UI", 9F);
+            btnAboutMe.ForeColor = Color.FromArgb(64, 123, 255);
+            btnAboutMe.Location = new Point(726, 23);
+            btnAboutMe.Name = "btnAboutMe";
+            btnAboutMe.Size = new Size(114, 30);
+            btnAboutMe.TabIndex = 8;
+            btnAboutMe.Text = "About Me";
+            btnAboutMe.UseVisualStyleBackColor = false;
+            // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -722,5 +738,6 @@
         private Label lblProfileRole;
         private Button btnQuickAction4;
         private Button btnQuickAction5;
+        private Button btnAboutMe;
         }
     }
