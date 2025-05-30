@@ -246,7 +246,7 @@ namespace window_form_dotnet
         private void NavButton_Click(object sender, EventArgs e)
             {
             // Reset all navigation buttons
-            Button[] navButtons = { btnDashboard, btnOrders, btnCustomers, btnReports, btnSettings, btnProfile };
+            Button[] navButtons = { btnDashboard, btnOrders, btnCustomers, btnReports, btnSettings, btnProfile ,btnAboutMe};
 
             foreach (Button btn in navButtons)
                 {
@@ -292,7 +292,6 @@ namespace window_form_dotnet
                     break;
                 case "profile":
                     MessageBox.Show("Profile section would open here.\n\nThis would typically show:\n- User profile editor\n- Account settings\n- Security options",
-                                  "Profile", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 }
             }
@@ -485,8 +484,9 @@ namespace window_form_dotnet
 
         private void btnAboutMe_Click(object sender, EventArgs e)
             {
+            
             // Create and show the About Me form as a modal dialog
-    using (var aboutForm = new AboutMeForm())
+            using (var aboutForm = new AboutMeForm())
                 {
                 // Create a semi-transparent overlay for the background
                 Form overlay = new Form

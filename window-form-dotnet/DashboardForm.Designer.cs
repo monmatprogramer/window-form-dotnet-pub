@@ -30,6 +30,7 @@
             {
             pnlMainContainer = new Panel();
             pnlTopNavigation = new Panel();
+            btnAboutMe = new Button();
             btnLogout = new Button();
             btnProfile = new Button();
             btnSettings = new Button();
@@ -73,7 +74,6 @@
             pnlRecentActivity = new Panel();
             lstRecentActivity = new ListBox();
             lblRecentActivityTitle = new Label();
-            btnAboutMe = new Button();
             pnlMainContainer.SuspendLayout();
             pnlTopNavigation.SuspendLayout();
             pnlContentArea.SuspendLayout();
@@ -121,6 +121,21 @@
             pnlTopNavigation.Padding = new Padding(20, 10, 20, 10);
             pnlTopNavigation.Size = new Size(1400, 70);
             pnlTopNavigation.TabIndex = 0;
+            // 
+            // btnAboutMe
+            // 
+            btnAboutMe.BackColor = Color.Transparent;
+            btnAboutMe.FlatAppearance.BorderSize = 0;
+            btnAboutMe.FlatStyle = FlatStyle.Flat;
+            btnAboutMe.Font = new Font("Segoe UI", 9F);
+            btnAboutMe.ForeColor = Color.FromArgb(64, 123, 255);
+            btnAboutMe.Location = new Point(726, 23);
+            btnAboutMe.Name = "btnAboutMe";
+            btnAboutMe.Size = new Size(114, 30);
+            btnAboutMe.TabIndex = 7;
+            btnAboutMe.Text = "About Me";
+            btnAboutMe.UseVisualStyleBackColor = false;
+            btnAboutMe.Click += btnAboutMe_Click;
             // 
             // btnLogout
             // 
@@ -643,21 +658,6 @@
             lblRecentActivityTitle.Size = new Size(1320, 30);
             lblRecentActivityTitle.TabIndex = 0;
             lblRecentActivityTitle.Text = "Recent Activity";
-            // 
-            // btnAboutMe
-            // 
-            btnAboutMe.BackColor = Color.Transparent;
-            btnAboutMe.FlatAppearance.BorderSize = 0;
-            btnAboutMe.FlatStyle = FlatStyle.Flat;
-            btnAboutMe.Font = new Font("Segoe UI", 9F);
-            btnAboutMe.ForeColor = Color.FromArgb(64, 123, 255);
-            btnAboutMe.Location = new Point(726, 23);
-            btnAboutMe.Name = "btnAboutMe";
-            btnAboutMe.Size = new Size(114, 30);
-            btnAboutMe.TabIndex = 8;
-            btnAboutMe.Text = "About Me";
-            btnAboutMe.UseVisualStyleBackColor = false;
-            btnAboutMe.Click += btnAboutMe_Click;
             // 
             // DashboardForm
             // 
