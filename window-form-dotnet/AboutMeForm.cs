@@ -105,6 +105,7 @@ namespace window_form_dotnet
         private void AddTechnologyChip(string technology)
             {
             Label chip = CreateChip(technology, Color.FromArgb(64, 123, 255));
+            //Add chip to the flow layout panel for technologies
             flpTechnologies.Controls.Add(chip);
             }
 
@@ -298,5 +299,7 @@ namespace window_form_dotnet
                 }
             return base.ProcessCmdKey(ref msg, keyData);
             }
+
+        
         }
     }
