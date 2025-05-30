@@ -45,6 +45,7 @@
             lblProfileName = new Label();
             lblProfileTitle = new Label();
             pnlQuickActions = new Panel();
+            btnQuickAction5 = new Button();
             btnQuickAction4 = new Button();
             btnQuickAction3 = new Button();
             btnQuickAction2 = new Button();
@@ -72,7 +73,6 @@
             pnlRecentActivity = new Panel();
             lstRecentActivity = new ListBox();
             lblRecentActivityTitle = new Label();
-            btnQuickAction5 = new Button();
             pnlMainContainer.SuspendLayout();
             pnlTopNavigation.SuspendLayout();
             pnlContentArea.SuspendLayout();
@@ -218,9 +218,9 @@
             btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(140, 20);
+            btnDashboard.Location = new Point(126, 20);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(80, 30);
+            btnDashboard.Size = new Size(94, 30);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
@@ -317,6 +317,21 @@
             pnlQuickActions.Padding = new Padding(20);
             pnlQuickActions.Size = new Size(290, 386);
             pnlQuickActions.TabIndex = 0;
+            // 
+            // btnQuickAction5
+            // 
+            btnQuickAction5.BackColor = Color.FromArgb(255, 192, 128);
+            btnQuickAction5.FlatAppearance.BorderSize = 0;
+            btnQuickAction5.FlatStyle = FlatStyle.Flat;
+            btnQuickAction5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnQuickAction5.ForeColor = Color.White;
+            btnQuickAction5.Location = new Point(17, 237);
+            btnQuickAction5.Name = "btnQuickAction5";
+            btnQuickAction5.Size = new Size(250, 35);
+            btnQuickAction5.TabIndex = 5;
+            btnQuickAction5.Text = "Add New Supplier";
+            btnQuickAction5.UseVisualStyleBackColor = false;
+            btnQuickAction5.Click += QuickAction_Click;
             // 
             // btnQuickAction4
             // 
@@ -626,21 +641,6 @@
             lblRecentActivityTitle.Size = new Size(1320, 30);
             lblRecentActivityTitle.TabIndex = 0;
             lblRecentActivityTitle.Text = "Recent Activity";
-            // 
-            // btnQuickAction5
-            // 
-            btnQuickAction5.BackColor = Color.FromArgb(255, 192, 128);
-            btnQuickAction5.FlatAppearance.BorderSize = 0;
-            btnQuickAction5.FlatStyle = FlatStyle.Flat;
-            btnQuickAction5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnQuickAction5.ForeColor = Color.White;
-            btnQuickAction5.Location = new Point(17, 237);
-            btnQuickAction5.Name = "btnQuickAction5";
-            btnQuickAction5.Size = new Size(250, 35);
-            btnQuickAction5.TabIndex = 5;
-            btnQuickAction5.Text = "Add New Supplier";
-            btnQuickAction5.UseVisualStyleBackColor = false;
-            btnQuickAction5.Click += QuickAction_Click;
             // 
             // DashboardForm
             // 
