@@ -45,5 +45,17 @@ namespace window_form_dotnet
             //close this form
             this.Close();
             }
+
+        //On Closing this form, the dashboard form will be opened
+        protected override void OnFormClosing(FormClosingEventArgs e)
+            {
+            base.OnFormClosing(e); // Call the base class implementation
+
+            // Open dashboard form
+            DashboardForm dashboardForm = new DashboardForm();
+            dashboardForm.Show();
+            }
         }
+
+
     }

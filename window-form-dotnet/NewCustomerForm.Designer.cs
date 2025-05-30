@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
             {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewCustomerForm));
             label1 = new Label();
             txtCusID = new TextBox();
             txtFName = new TextBox();
@@ -279,6 +280,7 @@
             Controls.Add(label2);
             Controls.Add(txtCusID);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "NewCustomerForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "NewCustomerForm";

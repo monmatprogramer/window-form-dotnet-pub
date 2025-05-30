@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
             {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSupplierForm));
             btnSave = new Button();
             btnClose = new Button();
             label1 = new Label();
@@ -182,6 +183,7 @@
             Controls.Add(label1);
             Controls.Add(btnClose);
             Controls.Add(btnSave);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "NewSupplierForm";
             Text = "NewSupplierForm";
             ResumeLayout(false);

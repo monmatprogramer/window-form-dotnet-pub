@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
             {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
             pnlMainContainer = new Panel();
             pnlTopNavigation = new Panel();
             btnAboutMe = new Button();
@@ -667,6 +668,7 @@
             ClientSize = new Size(1400, 800);
             Controls.Add(pnlMainContainer);
             Font = new Font("Segoe UI", 9F);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(1200, 600);
             Name = "DashboardForm";
             StartPosition = FormStartPosition.CenterScreen;

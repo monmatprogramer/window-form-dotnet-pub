@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
             {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewProductForm));
             label1 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -280,6 +281,7 @@
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "NewProductForm";
             Text = "NewProductForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();

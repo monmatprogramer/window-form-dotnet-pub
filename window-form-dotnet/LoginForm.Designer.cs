@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
             {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             pnlMainContainer = new Panel();
             pnlLoginCard = new Panel();
             pnlLinksContainer = new Panel();
@@ -295,6 +296,7 @@
             ClientSize = new Size(700, 867);
             Controls.Add(pnlMainContainer);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
