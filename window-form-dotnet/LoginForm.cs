@@ -1,7 +1,11 @@
-﻿
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
 using window_form_dotnet.Common;
 using window_form_dotnet.Model.dto;
 using window_form_dotnet.Model.impl;
+using window_form_dotnet.UI.Controls;
+using window_form_dotnet.UI.Helpers;
 using window_form_dotnet.UI.Dialogs;
 
 namespace window_form_dotnet
@@ -11,11 +15,41 @@ namespace window_form_dotnet
         private bool isPasswordVisible = false;
         private readonly AuthenticationService _authService;
 
+        // Modern buttons - replace the old ones
+        private ModernButton btnModernLogin;
+        private ModernButton btnModernCancel;
+
         public LoginForm()
             {
             InitializeComponent();
             InitializeFormStyle();
+            InitializeModernButtons(); // Add this line
             _authService = new AuthenticationService();
+            }
+
+        private void InitializeModernButtons()
+            {
+            // Remove old buttons from the button container
+            pnlButtonContainer.Controls.Clear();
+
+            // Create beautiful modern login button
+            btnModernLogin = ModernButtonFactory.CreateLoginButton();
+            btnModernLogin.Text = "SIGN IN";
+            btnModernLogin.Size = new Size(366, 50);
+            btnModernLogin.Location = new Point(0, 15);
+            btnModernLogin.BorderRadius = 8;
+            btnModernLogin.Click += BtnLogin_Click;
+
+            // Create modern cancel button
+            btnModernCancel = ModernButtonFactory.CreateSecondaryButton("Cancel");
+            btnModernCancel.Size = new Size(100, 35);
+            btnModernCancel.Location = new Point(133, 75);
+            btnModernCancel.BorderRadius = 6;
+            btnModernCancel.Click += BtnCancel_Click;
+
+            // Add buttons to container
+            pnlButtonContainer.Controls.Add(btnModernLogin);
+            pnlButtonContainer.Controls.Add(btnModernCancel);
             }
 
         private void InitializeFormStyle()
@@ -123,23 +157,6 @@ namespace window_form_dotnet
             btnTogglePassword.Text = isPasswordVisible ? "🙈" : "👁";
             }
 
-        // Button hover effects
-        private void Button_MouseEnter(object sender, EventArgs e)
-            {
-            if (sender == btnLogin)
-                {
-                btnLogin.BackColor = Color.FromArgb(45, 105, 230);
-                }
-            }
-
-        private void Button_MouseLeave(object sender, EventArgs e)
-            {
-            if (sender == btnLogin)
-                {
-                btnLogin.BackColor = Color.FromArgb(64, 123, 255);
-                }
-            }
-
         // Button click events
         private void BtnLogin_Click(object sender, EventArgs e)
             {
@@ -166,11 +183,7 @@ namespace window_form_dotnet
                 if (loginResponse.IsSuccess)
                     {
                     // Login successful
-                    //MessageBox.Show(loginResponse.Message,
-                    //              "Login Successful",
-                    //              MessageBoxButtons.OK,
-                    //              MessageBoxIcon.Information);
-                    ModernMessageDialog.ShowSuccess(loginResponse.Message,"Login Successfull");
+                    ModernMessageDialog.ShowSuccess(loginResponse.Message, "Login Successful");
 
                     // Open dashboard
                     OpenDashboard();
@@ -178,11 +191,7 @@ namespace window_form_dotnet
                 else
                     {
                     // Login failed
-                    //MessageBox.Show(loginResponse.Message,
-                    //              "Login Failed",
-                    //              MessageBoxButtons.OK,
-                    //              MessageBoxIcon.Warning);
-                    ModernMessageDialog.ShowError(loginResponse.Message,"Login Failed");
+                    ModernMessageDialog.ShowError(loginResponse.Message, "Login Failed");
 
                     // Clear password field
                     txtPassword.Clear();
@@ -209,11 +218,9 @@ namespace window_form_dotnet
                 // Get the username from the login form
                 string username = txtUsername.Text.Trim();
 
-                // Determine user role/privilege (you can get this from your AuthenticationService)
+                // Determine user role/privilege
                 string userRole = DetermineUserRole(username);
 
-                //Change dashboard form here
-                //var dashboardForm = new DashboardForm();
                 var dashboardForm = new DashboardForm(username, userRole);
                 dashboardForm.Show();
                 this.Hide();
@@ -236,7 +243,6 @@ namespace window_form_dotnet
         // Link click events
         private void LnkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             {
-            // Handle forgot password functionality
             MessageBox.Show("Forgot password functionality would open here.\n\nFor demo purposes:\nUsername: monmat\nPassword: 12345678",
                           "Forgot Password",
                           MessageBoxButtons.OK,
@@ -245,7 +251,6 @@ namespace window_form_dotnet
 
         private void LnkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             {
-            // Handle registration functionality
             MessageBox.Show("Registration form would open here.\n\nFor demo purposes, use:\nUsername: monmat\nPassword: 12345678",
                           "Register",
                           MessageBoxButtons.OK,
@@ -299,17 +304,17 @@ namespace window_form_dotnet
             {
             txtUsername.Enabled = !inProgress;
             txtPassword.Enabled = !inProgress;
-            btnLogin.Enabled = !inProgress;
+            btnModernLogin.Enabled = !inProgress; // Use modern button
             btnTogglePassword.Enabled = !inProgress;
 
             if (inProgress)
                 {
-                btnLogin.Text = "SIGNING IN...";
+                btnModernLogin.Text = "SIGNING IN...";
                 this.Cursor = Cursors.WaitCursor;
                 }
             else
                 {
-                btnLogin.Text = "SIGN IN";
+                btnModernLogin.Text = "SIGN IN";
                 this.Cursor = Cursors.Default;
                 }
             }
@@ -334,10 +339,10 @@ namespace window_form_dotnet
                 }
             base.OnFormClosing(e);
             }
+
         private string DetermineUserRole(string username)
             {
             // Placeholder implementation for determining user role
-            // Replace this with actual logic to fetch user role based on the username
             if (username.ToLower() == "admin" || username.ToLower() == "monmat")
                 {
                 return "Administrator";

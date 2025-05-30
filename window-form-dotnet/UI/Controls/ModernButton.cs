@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -20,7 +21,7 @@ namespace window_form_dotnet.UI.Controls
         private ButtonStyle buttonStyle = ButtonStyle.Primary;
         private bool isHovered = false;
         private bool isPressed = false;
-        private System.Windows.Forms.Timer animationTimer;
+        private System.Windows.Forms.Timer animationTimer = new System.Windows.Forms.Timer();
         private float currentAnimationValue = 0f;
         #endregion
 
@@ -29,6 +30,8 @@ namespace window_form_dotnet.UI.Controls
         /// <summary>
         /// Gets or sets the border radius for rounded corners
         /// </summary>
+        [DefaultValue(8)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int BorderRadius
             {
             get => borderRadius;
@@ -42,6 +45,8 @@ namespace window_form_dotnet.UI.Controls
         /// <summary>
         /// Gets or sets the button style (Primary, Secondary, Success, Warning, Danger)
         /// </summary>
+        [DefaultValue(ButtonStyle.Primary)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public ButtonStyle ButtonStyle
             {
             get => buttonStyle;
@@ -56,6 +61,7 @@ namespace window_form_dotnet.UI.Controls
         /// <summary>
         /// Gets or sets the base color of the button
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Color BaseColor
             {
             get => baseColor;
@@ -65,6 +71,22 @@ namespace window_form_dotnet.UI.Controls
                 UpdateHoverColors();
                 Invalidate();
                 }
+            }
+
+        /// <summary>
+        /// Indicates whether the BaseColor property should be serialized
+        /// </summary>
+        private bool ShouldSerializeBaseColor()
+            {
+            return baseColor != Color.FromArgb(64, 123, 255);
+            }
+
+        /// <summary>
+        /// Resets the BaseColor property to its default value
+        /// </summary>
+        private void ResetBaseColor()
+            {
+            BaseColor = Color.FromArgb(64, 123, 255);
             }
         #endregion
 
@@ -88,7 +110,6 @@ namespace window_form_dotnet.UI.Controls
             Cursor = Cursors.Hand;
 
             // Setup animation timer
-            animationTimer = new System.Windows.Forms.Timer();
             animationTimer.Interval = 16; // ~60 FPS
             animationTimer.Tick += AnimationTimer_Tick;
 
@@ -155,7 +176,7 @@ namespace window_form_dotnet.UI.Controls
         #endregion
 
         #region Animation
-        private void AnimationTimer_Tick(object sender, EventArgs e)
+        private void AnimationTimer_Tick(object? sender, EventArgs e)
             {
             if (isHovered && currentAnimationValue < 1.0f)
                 {

@@ -313,7 +313,27 @@
             ResumeLayout(false);
 
             }
+        // Add the missing event handler method for Button_MouseEnter
+        private void Button_MouseEnter(object sender, EventArgs e)
+            {
+            // Add logic for when the mouse enters the button, if needed.
+            // For example, you can change the button's background color:
+            if (sender is Button button)
+                {
+                button.BackColor = Color.FromArgb(45, 105, 230); // Example hover color
+                }
+            }
 
+        // Add the missing event handler method for Button_MouseLeave
+        private void Button_MouseLeave(object sender, EventArgs e)
+            {
+            // Add logic for when the mouse leaves the button, if needed.
+            // For example, you can reset the button's background color:
+            if (sender is Button button)
+                {
+                button.BackColor = Color.FromArgb(64, 123, 255); // Original color
+                }
+            }
         #endregion
 
         private System.Windows.Forms.Panel pnlMainContainer;

@@ -1,6 +1,7 @@
-﻿
+﻿using System;
+using System.Drawing;
 using System.Drawing.Drawing2D;
-
+using System.Windows.Forms;
 using System.ComponentModel;
 
 namespace window_form_dotnet.UI.Dialogs
@@ -12,15 +13,13 @@ namespace window_form_dotnet.UI.Dialogs
     public partial class ModernMessageDialog : Form
         {
         // Update the Timer declaration to explicitly use System.Windows.Forms.Timer
-        private System.Windows.Forms.Timer animationTimer;
+        private System.Windows.Forms.Timer animationTimer = new System.Windows.Forms.Timer();
         private int targetHeight;
         private double animationProgress = 0;
         private bool isClosing = false;
 
         // Dialog result
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-
-        // Dialog result
         public DialogResult Result { get; private set; } = DialogResult.None;
 
         // Message type enumeration
@@ -33,13 +32,13 @@ namespace window_form_dotnet.UI.Dialogs
             }
 
         // UI Controls
-        private Panel pnlMain;
-        private Panel pnlIcon;
-        private Label lblIcon;
-        private Label lblTitle;
-        private Label lblMessage;
-        private Button btnOK;
-        private Button btnCancel;
+        private Panel pnlMain = new Panel();
+        private Panel pnlIcon = new Panel();
+        private Label lblIcon = new Label();
+        private Label lblTitle = new Label();
+        private Label lblMessage = new Label();
+        private Button btnOK = new Button();
+        private Button btnCancel = new Button();
 
         // Constructor
         public ModernMessageDialog(string title, string message, MessageType type, bool showCancelButton = false)
@@ -239,12 +238,11 @@ namespace window_form_dotnet.UI.Dialogs
 
         private void InitializeAnimation()
             {
-            animationTimer = new System.Windows.Forms.Timer();
             animationTimer.Interval = 10; // 10ms for smooth animation
             animationTimer.Tick += AnimationTimer_Tick;
             }
 
-        private void AnimationTimer_Tick(object sender, EventArgs e)
+        private void AnimationTimer_Tick(object? sender, EventArgs e)
             {
             if (!isClosing)
                 {
@@ -312,13 +310,13 @@ namespace window_form_dotnet.UI.Dialogs
                 }
             }
 
-        private void BtnOK_Click(object sender, EventArgs e)
+        private void BtnOK_Click(object? sender, EventArgs e)
             {
             Result = DialogResult.OK;
             CloseWithAnimation();
             }
 
-        private void BtnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object? sender, EventArgs e)
             {
             Result = DialogResult.Cancel;
             CloseWithAnimation();
