@@ -485,7 +485,36 @@ namespace window_form_dotnet
 
         private void btnAboutMe_Click(object sender, EventArgs e)
             {
+            // Create and show the About Me form as a modal dialog
+    using (var aboutForm = new AboutMeForm())
+                {
+                // Create a semi-transparent overlay for the background
+                Form overlay = new Form
+                    {
+                    StartPosition = FormStartPosition.Manual,
+                    FormBorderStyle = FormBorderStyle.None,
+                    Opacity = 0.5,
+                    BackColor = Color.Black,
+                    WindowState = FormWindowState.Maximized,
+                    TopMost = true,
+                    Location = this.Location,
+                    ShowInTaskbar = false
+                    };
 
+                // Show overlay
+                overlay.Show(this);
+
+                // Set the About Me form to appear on top of the overlay
+                aboutForm.Owner = overlay;
+                aboutForm.TopMost = true;
+
+                // Show the About Me form as a dialog
+                aboutForm.ShowDialog();
+
+                // Close and dispose the overlay
+                overlay.Close();
+                overlay.Dispose();
+                }
             }
         }
     }
