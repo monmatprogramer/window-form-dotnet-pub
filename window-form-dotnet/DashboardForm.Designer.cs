@@ -339,6 +339,7 @@
             // btnQuickAction5
             // 
             btnQuickAction5.BackColor = Color.FromArgb(255, 192, 128);
+            btnQuickAction5.Cursor = Cursors.Hand;
             btnQuickAction5.FlatAppearance.BorderSize = 0;
             btnQuickAction5.FlatStyle = FlatStyle.Flat;
             btnQuickAction5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -354,6 +355,7 @@
             // btnQuickAction4
             // 
             btnQuickAction4.BackColor = Color.FromArgb(255, 128, 255);
+            btnQuickAction4.Cursor = Cursors.Hand;
             btnQuickAction4.FlatAppearance.BorderSize = 0;
             btnQuickAction4.FlatStyle = FlatStyle.Flat;
             btnQuickAction4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -369,6 +371,7 @@
             // btnQuickAction3
             // 
             btnQuickAction3.BackColor = Color.FromArgb(40, 167, 69);
+            btnQuickAction3.Cursor = Cursors.Hand;
             btnQuickAction3.FlatAppearance.BorderSize = 0;
             btnQuickAction3.FlatStyle = FlatStyle.Flat;
             btnQuickAction3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -384,6 +387,7 @@
             // btnQuickAction2
             // 
             btnQuickAction2.BackColor = Color.FromArgb(255, 193, 7);
+            btnQuickAction2.Cursor = Cursors.Hand;
             btnQuickAction2.FlatAppearance.BorderSize = 0;
             btnQuickAction2.FlatStyle = FlatStyle.Flat;
             btnQuickAction2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -399,6 +403,7 @@
             // btnQuickAction1
             // 
             btnQuickAction1.BackColor = Color.FromArgb(64, 123, 255);
+            btnQuickAction1.Cursor = Cursors.Hand;
             btnQuickAction1.FlatAppearance.BorderSize = 0;
             btnQuickAction1.FlatStyle = FlatStyle.Flat;
             btnQuickAction1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -450,6 +455,7 @@
             pnlStat4.BackColor = Color.White;
             pnlStat4.Controls.Add(lblStat4Value);
             pnlStat4.Controls.Add(lblStat4Title);
+            pnlStat4.Cursor = Cursors.Hand;
             pnlStat4.Dock = DockStyle.Left;
             pnlStat4.Location = new Point(780, 0);
             pnlStat4.Name = "pnlStat4";
@@ -482,6 +488,7 @@
             pnlStat3.BackColor = Color.White;
             pnlStat3.Controls.Add(lblStat3Value);
             pnlStat3.Controls.Add(lblStat3Title);
+            pnlStat3.Cursor = Cursors.Hand;
             pnlStat3.Dock = DockStyle.Left;
             pnlStat3.Location = new Point(520, 0);
             pnlStat3.Name = "pnlStat3";
@@ -514,6 +521,7 @@
             pnlStat2.BackColor = Color.White;
             pnlStat2.Controls.Add(lblStat2Value);
             pnlStat2.Controls.Add(lblStat2Title);
+            pnlStat2.Cursor = Cursors.Hand;
             pnlStat2.Dock = DockStyle.Left;
             pnlStat2.Location = new Point(260, 0);
             pnlStat2.Name = "pnlStat2";
@@ -546,6 +554,7 @@
             pnlStat1.BackColor = Color.White;
             pnlStat1.Controls.Add(lblStat1Value);
             pnlStat1.Controls.Add(lblStat1Title);
+            pnlStat1.Cursor = Cursors.Hand;
             pnlStat1.Dock = DockStyle.Left;
             pnlStat1.Location = new Point(0, 0);
             pnlStat1.Name = "pnlStat1";
@@ -588,6 +597,7 @@
             // 
             pnlChart2.BackColor = Color.White;
             pnlChart2.Controls.Add(lblChart2Title);
+            pnlChart2.Cursor = Cursors.Hand;
             pnlChart2.Dock = DockStyle.Fill;
             pnlChart2.Location = new Point(530, 0);
             pnlChart2.Name = "pnlChart2";
@@ -609,6 +619,7 @@
             // 
             pnlChart1.BackColor = Color.White;
             pnlChart1.Controls.Add(lblChart1Title);
+            pnlChart1.Cursor = Cursors.Hand;
             pnlChart1.Dock = DockStyle.Left;
             pnlChart1.Location = new Point(0, 0);
             pnlChart1.Name = "pnlChart1";
@@ -742,5 +753,12 @@
         private Button btnQuickAction4;
         private Button btnQuickAction5;
         private Button btnAboutMe;
+
+        // Add the missing event handler method for BtnHelp_Click
+        private void BtnHelp_Click(object sender, EventArgs e)
+        {
+            // Add your logic here for the Help button click event
+            MessageBox.Show("Help button clicked!", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+    }
     }
