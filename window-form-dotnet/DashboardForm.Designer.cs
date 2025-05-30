@@ -657,6 +657,7 @@
             btnAboutMe.TabIndex = 8;
             btnAboutMe.Text = "About Me";
             btnAboutMe.UseVisualStyleBackColor = false;
+            btnAboutMe.Click += btnAboutMe_Click;
             // 
             // DashboardForm
             // 

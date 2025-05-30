@@ -483,6 +483,9 @@ namespace window_form_dotnet
             pnlChart2.Invalidate();
             }
 
+        private void btnAboutMe_Click(object sender, EventArgs e)
+            {
 
+            }
         }
     }
