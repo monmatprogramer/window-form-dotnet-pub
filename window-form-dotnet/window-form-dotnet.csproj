@@ -17,4 +17,10 @@
     <ProjectReference Include="..\MyCommands\MyCommands.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UI\Controls\" />
+    <Folder Include="UI\Helpers\" />
+    <Folder Include="UI\Demo\" />
+  </ItemGroup>
+
 </Project>
