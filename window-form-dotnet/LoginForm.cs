@@ -1,9 +1,8 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
+﻿
 using window_form_dotnet.Common;
 using window_form_dotnet.Model.dto;
 using window_form_dotnet.Model.impl;
+using window_form_dotnet.UI.Dialogs;
 
 namespace window_form_dotnet
     {
@@ -167,10 +166,11 @@ namespace window_form_dotnet
                 if (loginResponse.IsSuccess)
                     {
                     // Login successful
-                    MessageBox.Show(loginResponse.Message,
-                                  "Login Successful",
-                                  MessageBoxButtons.OK,
-                                  MessageBoxIcon.Information);
+                    //MessageBox.Show(loginResponse.Message,
+                    //              "Login Successful",
+                    //              MessageBoxButtons.OK,
+                    //              MessageBoxIcon.Information);
+                    ModernMessageDialog.ShowSuccess(loginResponse.Message,"Login Successfull");
 
                     // Open dashboard
                     OpenDashboard();
@@ -178,10 +178,11 @@ namespace window_form_dotnet
                 else
                     {
                     // Login failed
-                    MessageBox.Show(loginResponse.Message,
-                                  "Login Failed",
-                                  MessageBoxButtons.OK,
-                                  MessageBoxIcon.Warning);
+                    //MessageBox.Show(loginResponse.Message,
+                    //              "Login Failed",
+                    //              MessageBoxButtons.OK,
+                    //              MessageBoxIcon.Warning);
+                    ModernMessageDialog.ShowError(loginResponse.Message,"Login Failed");
 
                     // Clear password field
                     txtPassword.Clear();

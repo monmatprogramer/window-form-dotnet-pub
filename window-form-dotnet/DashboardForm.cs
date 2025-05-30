@@ -291,7 +291,7 @@ namespace window_form_dotnet
                                   "Settings", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case "profile":
-                    MessageBox.Show("Profile section would open here.\n\nThis would typically show:\n- User profile editor\n- Account settings\n- Security options",
+                    MessageBox.Show("Profile section would open here.\n\nThis would typically show:\n- User profile editor\n- Account settings\n- Security options");
                     break;
                 }
             }
@@ -352,6 +352,7 @@ namespace window_form_dotnet
 
                 // Close dashboard
                 this.Hide();
+                
                 }
             }
 
