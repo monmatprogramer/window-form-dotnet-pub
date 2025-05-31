@@ -251,10 +251,25 @@ namespace window_form_dotnet
 
         private void LnkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             {
-            MessageBox.Show("Registration form would open here.\n\nFor demo purposes, use:\nUsername: monmat\nPassword: 12345678",
-                          "Register",
-                          MessageBoxButtons.OK,
-                          MessageBoxIcon.Information);
+            //MessageBox.Show("Registration form would open here.\n\nFor demo purposes, use:\nUsername: monmat\nPassword: 12345678",
+            //              "Register",
+            //              MessageBoxButtons.OK,
+            //              MessageBoxIcon.Information);
+
+            //call register form
+            var registerForm = new RegisterForm();
+            registerForm.ShowDialog(this);
+            //if (registerForm.DialogResult == DialogResult.OK)
+            //    {
+            //    // If registration was successful, set the username
+            //    SetUsername(registerForm.Username);
+            //    txtPassword.Focus();
+            //    }
+            //else
+            //    {
+            //    // If registration was cancelled, focus on the username field
+            //    txtUsername.Focus();
+            //    }
             }
 
         // Input validation
